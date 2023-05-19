@@ -1,10 +1,10 @@
 import Card from 'src/pages/drivers/card'
 import Layout from 'src/components/layout'
-import { Drivers } from 'src/types/Drivers'
 import Search from 'src/components/Search'
 import { useState } from 'react'
+import { Drivers } from 'src/types/Drivers'
 
-export default function Drivers({ drivers }: Drivers) {
+export default function DriversPage({ drivers }: Drivers) {
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('ASC')
   return (

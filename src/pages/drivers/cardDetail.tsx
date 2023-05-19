@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 export default function CardDetail({ driver }: Driver) {
-  const data_brasileira = driver?.dateOfBirth.split('-').reverse().join('/')
+  const dataBrasileira = driver?.dateOfBirth.split('-').reverse().join('/')
   const router = useRouter()
   return (
     <div className="text-center">
@@ -22,7 +22,7 @@ export default function CardDetail({ driver }: Driver) {
           </h3>
           <h4 className="font-bold text-2xl">{driver?.permanentNumber}</h4>
           <h4>{driver?.nationality}</h4>
-          <h4>{data_brasileira}</h4>
+          <h4>{dataBrasileira}</h4>
 
           <a
             href={driver?.url}
