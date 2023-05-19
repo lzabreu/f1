@@ -1,18 +1,16 @@
 import { ReactNode } from 'react'
 import Footer from './footer'
 import Header from './header'
-import Search from './Search'
 
 interface Props {
   children: ReactNode
 }
 
 export default function Layout({ children }: Props) {
-
   const style = 'flex items-center bg-slate-100 px-4'
 
   return (
-    <div className='flex flex-col w-full h-screen'>
+    <div className="flex flex-col w-full h-screen">
       <div className={style}>
         <Header />
       </div>
