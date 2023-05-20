@@ -10,7 +10,7 @@ export default function CardDetail({ driver }: Driver) {
       <button onClick={() => router.back()}>Voltar</button>
       <div className=" bg-slate-200 flex flex-col items-center p-3 my-3 rounded-xl shadow-slate-900 shadow-md">
         <Image
-          src={`/${driver?.givenName}.png`}
+          src={`../../img/${driver?.givenName}.png`}
           width={350}
           height={100}
           alt="imagem"
