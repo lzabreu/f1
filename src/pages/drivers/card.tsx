@@ -6,7 +6,7 @@ export default function Card({ driver }: Driver) {
   return (
     <div className="h-40 bg-slate-300 flex rounded-xl items-center shadow-slate-900 shadow-md">
       <Image
-        src={`/img/${driver?.givenName as string}.png`}
+        src={`/static/img/${driver?.givenName as string}.png`}
         width={100}
         height={100}
         alt="imagem"
