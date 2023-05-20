@@ -6,7 +6,7 @@ export default function Card({ driver }: Driver) {
   return (
     <div className="h-40 bg-slate-300 flex rounded-xl items-center shadow-slate-900 shadow-md">
       <Image
-        src={`/static/img/${driver?.givenName as string}.png`}
+        src={`/static/img/${driver?.givenName.toLowerCase()}.png`}
         width={100}
         height={100}
         alt="imagem"
@@ -19,7 +19,9 @@ export default function Card({ driver }: Driver) {
         <h4>{driver?.permanentNumber}</h4>
         <h4>{driver?.nationality}</h4>
         <div className="text-green-700 mt-4">
-          <Link href={`/drivers/${driver?.driverId}`}>Mais Informação</Link>
+          <Link href={`/drivers/${driver?.driverId.toLowerCase()}`}>
+            Mais Informação
+          </Link>
         </div>
       </div>
     </div>

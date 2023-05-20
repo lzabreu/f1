@@ -4,7 +4,7 @@ const nextConfig = {
   // distDir: 'dist',
   images: {
     unoptimized: true,
-    domains: ['ergast.com'],
+    domains: ['http://ergast.com'],
   },
 }
 
