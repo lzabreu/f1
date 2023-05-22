@@ -4,15 +4,16 @@ import { Drivers } from 'src/types/Drivers'
 import CardDetail from './cardDetail'
 
 export default function Detail({ drivers }: Drivers) {
+  console.log(drivers)
+
   return (
     <Layout>
       <div>
-        {drivers &&
-          drivers.map((driver, index) => (
-            <div key={index}>
-              <CardDetail key={index} driver={driver} />
-            </div>
-          ))}
+        {drivers?.map((driver, index) => (
+          <div key={index}>
+            <CardDetail key={index} driver={driver} />
+          </div>
+        ))}
       </div>
     </Layout>
   )
@@ -25,7 +26,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const paths = data.MRData.DriverTable.Drivers.map(
       (drivers: Drivers, index: number) => {
         return {
-          params: { driverId: drivers.drivers[index].driverId.toString() },
+          params: {
+            driverId: drivers.drivers[index].driverId.toString().toLowerCase(),
+          },
         }
       },
     )

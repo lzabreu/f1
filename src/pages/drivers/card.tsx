@@ -1,6 +1,5 @@
 import { Driver } from 'src/types/Driver'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Card({ driver }: Driver) {
   return (
@@ -19,9 +18,9 @@ export default function Card({ driver }: Driver) {
         <h4>{driver?.permanentNumber}</h4>
         <h4>{driver?.nationality}</h4>
         <div className="text-green-700 mt-4">
-          <Link href={`/drivers/${driver?.driverId.toLowerCase()}`}>
+          <a href={`/drivers/${driver?.driverId.toLowerCase()}`}>
             Mais Informação
-          </Link>
+          </a>
         </div>
       </div>
     </div>

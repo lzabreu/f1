@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: false,
   // distDir: 'dist',
   images: {
-    unoptimized: true,
+    // unoptimized: true,
     domains: ['http://ergast.com'],
   },
 }

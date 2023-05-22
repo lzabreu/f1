@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 
 export default function CardDetail({ driver }: Driver) {
   const dataBrasileira = driver?.dateOfBirth.split('-').reverse().join('/')
+  console.log(driver)
+
   const router = useRouter()
   return (
     <div className="text-center">
